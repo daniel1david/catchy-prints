@@ -1,0 +1,91 @@
+/* .rounded-box {
+    height: 9rem;
+    max-width: 1000px; 
+    width: 95%; 
+    margin: 0 auto;
+    background-color: rgb(56, 53, 53);
+    border-radius: 80px;
+    padding: 2rem;
+} */
+
+.site-footer {
+  background-color: #383535;
+  font-family: 'Nunito', 'Open Sans', sans-serif;
+  color: #eceae5;
+}
+
+/* Top dark rounded section */
+.top-section {
+  background-color: #eceae5;
+  padding: 4rem 0 6rem;
+}
+
+.rounded-box {
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #383535;
+  border-radius: 100px;
+  padding: 2.5rem 2rem;
+}
+
+/* Links styling – exactly like the reference */
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #eceae5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #0279d4; 
+}
+
+/* Right column – slightly lighter text */
+.bottom-section ul small {
+  line-height: 1.6;
+}
+
+/* Built by text */
+.built-by {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .rounded-box {
+    border-radius: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-section {
+    padding: 3rem 0 5rem;
+    margin-bottom: -3rem;
+  }
+  .rounded-box {
+    width: 100%;
+    border-radius: 0;
+    padding: 2rem 1rem;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .bottom-section .row {
+    flex-direction: column;
+  }
+  
+  .bottom-section .text-md-end {
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,74 @@
+/* Reset & full viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif !important;
+    overflow-x: hidden;
+}
+
+/* Hero – full screen background using your logo colours */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, 
+        #6A11CB 0%,     /* Purple from your logo */
+        #2575FC 50%,    /* Blue from your logo */
+        #00D4FF 100%    /* Cyan from your logo */
+    );
+    background-image: url('images/banner.jpg'); /* fallback if you still want a photo */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    position: relative;
+    margin-top: var(--navbar-height, 0);            /* automatically adjusts to navbar */
+}
+
+/* Dark overlay for text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* Logo sizing */
+.hero-logo {
+    max-width: 200px;
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+
+
+
+/* Optional: If navbar is transparent and sits ON TOP of hero (most modern look) */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background: transparent !important;
+    transition: background 0.3s ease;
+}
+
+/* When user scrolls, make navbar solid (optional but nice) */
+.scrolled header {
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1.display-3 {
+        font-size: 2.8rem;
+    }
+    .hero .lead {
+        font-size: 1.1rem;
+    }
+    .hero-logo {
+        max-width: 150px;
+    }
+}

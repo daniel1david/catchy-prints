@@ -1,0 +1,37 @@
+.pricing {
+    /* padding: 60px 20px; */
+    min-height: 100vh;
+    padding-top: 8rem;
+}
+
+.pricing-table {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pricing-table th,
+.pricing-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px !important;
+}
+
+.pricing-table strong {
+    font-size: 1.2em;
+}
+
+.note {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .table-responsive {
+        width: 100%;
+    }
+
+    .pricing-table td {
+        font-size: 0.8rem;
+    }
+}

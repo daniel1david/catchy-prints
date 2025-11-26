@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- CSS links -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <!-- Bootstrap include -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap 5 Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Lato:wght@100;300;400;700;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- use nav placeholder -->
+        <div id="nav-placeholder"></div>
+    </header>
+    <main>
+        <div
+            class="hero d-flex align-items-center justify-content-center text-center position-relative overflow-hidden">
+            <div class="container my-5">
+                <form action="" method="POST">
+                    <div class="mb-3">
+                        <!-- <label for="nameInput" class="form-label">Name</label> -->
+                        <input type="text" class="underline-input" id="nameInput" placeholder="Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <!-- <label for="emailInput" class="form-label">Email address</label> -->
+                        <input type="email" class="underline-input" id="emailInput" placeholder="Email Address">
+                    </div>
+                    <div class="mb-3">
+                        <!-- <label for="phoneInput" class="form-label">Number</label> -->
+                        <input type="text" class="underline-input" id="phoneInput" placeholder="Number" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Query</label>
+                        <textarea class="underline-input textarea-box" rows="5" placeholder="Tell us how we can help..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-center align-items-center py-5 flex-column min-vh-100">
+            <h4 class="mb-4">Get Directions</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.8360518639324!2d25.5201419!3d-33.95828829999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad0fdf19da1ed%3A0xbdea4abc4522cb29!2s83%20Hawthorne%20Ave%2C%20Sunridge%20Park%2C%20Gqeberha%2C%206045!5e1!3m2!1sen!2sza!4v1764138891611!5m2!1sen!2sza"
+                width="400" height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+    </main>
+
+    <!-- use footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load nav and footer with error handling -->
+    <script>
+        // Reusable function to load partials
+        async function loadPartial(url, placeholderId, fallbackMessage = 'Failed to load content.') {
+            const placeholder = document.getElementById(placeholderId);
+
+            try {
+                const response = await fetch(url + '?v=' + Date.now()); // cache buster (optional)
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+                }
+
+                const html = await response.text();
+                placeholder.innerHTML = html;
+            } catch (error) {
+                console.error(`Failed to load ${url}:`, error);
+
+                // Optional: Show a clean error message instead of blank space
+                placeholder.innerHTML = `
+            <div style="background:#f8d7da; color:#721c24; padding:1rem; border:1px solid #f5c6cb; border-radius:4px; text-align:center;">
+                <strong>Warning:</strong> ${fallbackMessage} 
+                <br><small>${error.message}</small>
+            </div>
+            `;
+            }
+        }
+
+        // Load navigation and footer
+        loadPartial('nav.html', 'nav-placeholder', 'Navigation could not be loaded.');
+        loadPartial('footer.html', 'footer-placeholder', 'Footer could not be loaded.');
+    </script>
+</body>
+
+</html>

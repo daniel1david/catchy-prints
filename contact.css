@@ -1,0 +1,75 @@
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, 
+        #6A11CB 0%,     /* Purple from your logo */
+        #2575FC 50%,    /* Blue from your logo */
+        #00D4FF 100%    /* Cyan from your logo */
+    );
+    background-position: center;
+    background-blend-mode: overlay;
+    position: relative;
+    margin-top: var(--navbar-height, 0);            /* automatically adjusts to navbar */
+}
+
+/* contact.css */
+.underline-input {
+    border: none !important;
+    border-bottom: 2px solid #fff !important;   /* white looks good on your gradient */
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 8px 0 !important;
+    color: white !important;
+    font-size: 16px;
+    width: 80%;
+}
+
+textarea {
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.underline-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.underline-input:focus {
+    border-bottom-color: #00d4ff !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Optional: make labels white too */
+.form-label {
+    color: white;
+}
+
+/* New class just for the textarea with white background */
+.textarea-box {
+    width: 80% !important;
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+    background: white !important;           /* white background */
+    color: #fff !important;                  /* dark text for readability */
+    padding: 12px 16px !important;           /* comfortable padding inside */
+    border-radius: 8px !important;           /* soft corners */
+    border: 2px solid transparent !important;
+    border-bottom: 3px solid #00D4FF !important;  /* keep your cyan underline */
+    resize: vertical;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+/* To make the border diappear when clicked */
+/* .textarea-box:focus {
+    outline: none;
+    border-bottom-color: #2575FC !important;
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+} */
+
+.textarea-box::placeholder {
+    color: #999;
+}
