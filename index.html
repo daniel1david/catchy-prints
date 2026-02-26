@@ -55,15 +55,15 @@
                         <!-- Subheadline -->
                         <p class="lead text-white mb-4 opacity-90">
                             Premium Silk-Screen Printing • Digital DTG & DTF • Embroidery • Vinyl Heat Transfer<br>
-                            From 1 piece to 10,000 — we bring your ideas to life with vibrant, durable results.
+                            We bring your ideas to life with vibrant, durable results.
                         </p>
 
                         <!-- CTA Buttons -->
                         <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-5">
-                            <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                            <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
                                 Get a Free Quote
                             </a>
-                            <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold">
+                            <a href="services.html" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold">
                                 View Our Services
                             </a>
                         </div>
@@ -128,7 +128,19 @@
             setTimeout(updateNavbarHeight, 100);
             setTimeout(updateNavbarHeight, 800);
         });
+
+        // Exapnd services when hovered over
+        const dropdown = new bootstrap.Dropdown(dropdownToggle);
+
+        dropdownToggle.addEventListener("mouseenter", () => {
+            dropdown.show();
+        });
+
+        dropdownToggle.addEventListener("mouseleave", () => {
+            dropdown.hide();
+        });
     </script>
+
 </body>
 
 </html>

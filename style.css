@@ -55,6 +55,15 @@ header {
     backdrop-filter: blur(10px);
 }
 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Optional: fix small gap/closing issue */
+.dropdown:hover .dropdown-menu {
+    margin-top: 0;           /* remove the tiny gap that causes flicker */
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero h1.display-3 {
