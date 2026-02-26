@@ -16,10 +16,10 @@ html, body {
         #2575FC 50%,    /* Blue from your logo */
         #00D4FF 100%    /* Cyan from your logo */
     );
-    background-image: url('images/banner.jpg'); /* fallback if you still want a photo */
+    /* background-image: url('images/banner.jpg'); //Fall back photo
     background-size: cover;
     background-position: center;
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; */
     position: relative;
     margin-top: var(--navbar-height, 0);            /* automatically adjusts to navbar */
 }
@@ -28,7 +28,7 @@ html, body {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -42,8 +42,7 @@ html, body {
 
 
 
-
-/* Optional: If navbar is transparent and sits ON TOP of hero (most modern look) */
+/* If navbar is transparent and sits ON TOP of hero (most modern look) */
 header {
     position: absolute;
     top: 0;
