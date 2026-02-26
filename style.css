@@ -16,10 +16,7 @@ html, body {
         #2575FC 50%,    /* Blue from your logo */
         #00D4FF 100%    /* Cyan from your logo */
     );
-    /* background-image: url('images/banner.jpg'); //Fall back photo
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay; */
+
     position: relative;
     margin-top: var(--navbar-height, 0);            /* automatically adjusts to navbar */
 }
